@@ -1157,7 +1157,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .header-inner {
-    width: 1160px;
+    width: 1000px;
   }
 }
 @media (min-width: 1600px) {
@@ -1599,7 +1599,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .footer-inner {
-    width: 1160px;
+    width: 1000px;
   }
 }
 @media (min-width: 1600px) {
@@ -2490,7 +2490,7 @@ mjx-container[display='true'] + br {
 }
 @media (min-width: 1200px) {
   .main {
-    width: 1160px;
+    width: 1000px;
   }
 }
 @media (min-width: 1600px) {
