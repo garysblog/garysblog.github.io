@@ -20,16 +20,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="在我就讀的大學，有一門數學系開的課叫「分析導論」(以前叫作高等微積分)。雖然不知道數學系的學生是不是已經習慣了，不過對一個經濟系的學生而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。儘管如此，至今上了半學期的課，我覺得分導其實很有趣，所以想寫文章向讀者分享數學的快樂(?)。 顯然地，我對課程內容的理解有限(開始寫的時候還沒修完一學期)，也不打算把所有證明都丟上來。這系列的文章會省略或簡">
+<meta name="description" content="在我就讀的大學，有一門數學系開的課叫「分析導論」(以前叫作高等微積分)。雖然不知道數學系的學生是不是已經習慣了，不過對一個經濟系的學生而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。儘管如此，至今上了半學期的課，我覺得分導其實很有趣，於是寫了文章向更多人分享數學的快樂 (?)。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="數學分析—Ch.1 數論">
 <meta property="og:url" content="http://example.com/2021/12/14/ma-ch1/index.html">
 <meta property="og:site_name" content="就這樣吧">
-<meta property="og:description" content="在我就讀的大學，有一門數學系開的課叫「分析導論」(以前叫作高等微積分)。雖然不知道數學系的學生是不是已經習慣了，不過對一個經濟系的學生而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。儘管如此，至今上了半學期的課，我覺得分導其實很有趣，所以想寫文章向讀者分享數學的快樂(?)。 顯然地，我對課程內容的理解有限(開始寫的時候還沒修完一學期)，也不打算把所有證明都丟上來。這系列的文章會省略或簡">
+<meta property="og:description" content="在我就讀的大學，有一門數學系開的課叫「分析導論」(以前叫作高等微積分)。雖然不知道數學系的學生是不是已經習慣了，不過對一個經濟系的學生而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。儘管如此，至今上了半學期的課，我覺得分導其實很有趣，於是寫了文章向更多人分享數學的快樂 (?)。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/7zCcKoY.jpg">
 <meta property="article:published_time" content="2021-12-14T15:58:22.000Z">
-<meta property="article:modified_time" content="2022-01-21T13:17:46.506Z">
+<meta property="article:modified_time" content="2022-01-21T16:01:44.406Z">
 <meta property="article:author" content="Gary">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/7zCcKoY.jpg">
@@ -120,7 +120,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F-Order-%E8%88%87%E9%AB%94-Field"><span class="nav-number">2.</span> <span class="nav-text">序(Order)與體(Field)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E9%9B%86-Ordered-set"><span class="nav-number">2.1.</span> <span class="nav-text">有序集(Ordered set)</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%8F-Order-%E8%88%87%E9%AB%94-Field"><span class="nav-number">2.</span> <span class="nav-text">序 (Order)與體 (Field)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E9%9B%86-Ordered-set"><span class="nav-number">2.1.</span> <span class="nav-text">有序集 (Ordered set)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E9%AB%94-Ordered-field"><span class="nav-number">2.2.</span> <span class="nav-text">有序體 (Ordered field)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%B4%E5%BE%B7%E9%87%91%E5%88%87%E5%89%B2-Dedekind-cut"><span class="nav-number">2.3.</span> <span class="nav-text">戴德金切割 (Dedekind cut)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -209,7 +209,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-01-21 21:17:46" itemprop="dateModified" datetime="2022-01-21T21:17:46+08:00">2022-01-21</time>
+        <time title="Modified: 2022-01-22 00:01:44" itemprop="dateModified" datetime="2022-01-22T00:01:44+08:00">2022-01-22</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -235,14 +235,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>在我就讀的大學，有一門數學系開的課叫「分析導論」(以前叫作高等微積分)。雖然不知道數學系的學生是不是已經習慣了，不過對一個經濟系的學生而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。儘管如此，至今上了半學期的課，我覺得分導其實很有趣，所以想寫文章向讀者分享數學的快樂(?)。<!-- read more --></p>
-<p>顯然地，我對課程內容的理解有限(開始寫的時候還沒修完一學期)，也不打算把所有證明都丟上來。這系列的文章會省略或簡單描述定理的證明，著重在我認為比較重要或有趣的部分。希望這系列文章對不瞭解數學分析在學什麼，或是對數學有興趣的讀者有幫助，看完之後如果對更詳盡的證明有興趣，那麼請去找本分析的書吧。</p>
-<p><img src="https://i.imgur.com/7zCcKoY.jpg"><br>這是此文章參考的原文書，全書僅三百多頁，而且充滿證明。雖然大部分的微積分技巧應該在大一微積分就會教了，但如果有一些定理是你學的時候不太能理解為什麼，或者只能用直觀理解，也許你能從這本書找到解答。</p>
+        <p>在我就讀的大學，有一門數學系開的課叫「分析導論」(以前叫作高等微積分)。雖然不知道數學系的學生是不是已經習慣了，不過對一個經濟系的學生而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。儘管如此，至今上了半學期的課，我覺得分導其實很有趣，於是寫了文章向更多人分享數學的快樂 (?)。</p>
+<span id="more"></span>
+
+<p>顯然地，我對課程內容的理解有限 (開始寫的時候還沒修完一學期)，也不打算把所有證明都丟上來。這系列的文章會省略或簡單描述定理的證明，著重在我認為比較重要或有趣的部分。希望這系列文章對不瞭解數學分析在學什麼，或是對數學有興趣的讀者有幫助，看完之後如果對更詳盡的證明有興趣，那麼請去找本分析相關的書吧。</p>
+<p><img src="https://i.imgur.com/7zCcKoY.jpg"><br>這是此文章參考的原文書，全書三百多頁充滿了證明。雖然大部分的微積分技巧應該在大一微積分就會教了，但如果有一些定理是你學的時候不太能理解為什麼，或者只能用直觀理解，也許你能從這本書找到解答。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先請想想一個問題：為什麼 $\lim\limits_{n\rightarrow\infty}\dfrac{1}{n}=0$ ?<br>從極限的定義來看，我們需要證明：對任一實數 $r&gt;0$ ，存在正整數 $n$ 使得 $\dfrac{1}{n}&lt;r$。直觀上這個 $n$ 理所當然應該要存在，否則就像是在說有一個實數可以比任何正整數都還要大一樣。</p>
 <p>那<br>我們應該如何說明沒有這樣的實數呢?</p>
-<p>這個問題涉及實數系的定義，以下先介紹「有序體」的概念，至於實數系的建構恕我簡單帶過，</p>
-<h2 id="序-Order-與體-Field"><a href="#序-Order-與體-Field" class="headerlink" title="序(Order)與體(Field)"></a>序(Order)與體(Field)</h2><h3 id="有序集-Ordered-set"><a href="#有序集-Ordered-set" class="headerlink" title="有序集(Ordered set)"></a>有序集(Ordered set)</h3><p>考慮任意一個集合 $S$ 以及一個順序關係(例如 $&lt;$ )，則<br>(1) 若 $x\in S$ ， $y\in S$，那以下只會有一個敘述成立，<br>$$x&lt;y,\quad x=y,\quad y&lt;x$$<br>(2) </p>
-
+<p>這個問題涉及實數系的定義，以下先介紹「有序體」的概念，至於實數系的建構恕我簡單帶過，之後介紹本章最重要的兩個定理：最小上界定理，和阿基米德性質。</p>
+<h2 id="序-Order-與體-Field"><a href="#序-Order-與體-Field" class="headerlink" title="序 (Order)與體 (Field)"></a>序 (Order)與體 (Field)</h2><h3 id="有序集-Ordered-set"><a href="#有序集-Ordered-set" class="headerlink" title="有序集 (Ordered set)"></a>有序集 (Ordered set)</h3><p>考慮任意一個集合 $S$ 以及一個順序關係 (例如 $&lt;$ )，如果滿足<br>(1) 若 $x\in S$ ，$y\in S$，那以下只會有一種情況成立，<br>$$x&lt;y,\quad x=y,\quad y&lt;x$$<br>(2) 若 $x,y,z\in S$ 且 $x&lt;y$ ，$y&lt;z$ ，則 $x&lt;z$。<br>，則我們說 $(S,&lt;)$ 是一個 Ordered set。順帶一提，這裡的 $S$ 是一個全序集，裡面所有元素皆可比較。順序關係不必一定要求集合內的所有元素具可比性 (這樣的關係稱為偏序關係)，但是仍需要滿足遞移性等性質。</p>
+<h3 id="有序體-Ordered-field"><a href="#有序體-Ordered-field" class="headerlink" title="有序體 (Ordered field)"></a>有序體 (Ordered field)</h3><p>體 (Field)是包含加法和乘法運算的集合，除此之外，這個集合 $F$ 還須滿足 Field axioms，包含加法和乘法運算封閉、分配律等 (剩下交給 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9F%9F_(%E6%95%B8%E5%AD%B8)">維基百科</a>)。<br>有序體 (Ordered field)是一個 Field同時也是 Ordered set，且滿足<br>(1) 若 $x,y,z\in F$ 且 $y&lt;z$ ，則 $x+y&lt;x+z$。<br>(2) 若 $x\in F$ ，$y\in F$ 且 $x&gt;0$ ，$y&gt;0$ ，則 $xy&gt;0$。<br>有理數和實數都是 Field，整數不是 Field，因為整數集合不包含所有整數的乘法反元素。</p>
+<h3 id="戴德金切割-Dedekind-cut"><a href="#戴德金切割-Dedekind-cut" class="headerlink" title="戴德金切割 (Dedekind cut)"></a>戴德金切割 (Dedekind cut)</h3>
     </div>
 
     
