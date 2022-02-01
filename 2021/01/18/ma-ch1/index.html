@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://i.imgur.com/02J8esW.png">
 <meta property="og:image" content="https://i.imgur.com/n1Nvm6L.png">
 <meta property="article:published_time" content="2021-01-18T15:34:22.000Z">
-<meta property="article:modified_time" content="2022-02-01T13:41:47.490Z">
+<meta property="article:modified_time" content="2022-02-01T14:12:10.403Z">
 <meta property="article:author" content="Gary">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/7zCcKoY.jpg">
@@ -211,7 +211,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-01 21:41:47" itemprop="dateModified" datetime="2022-02-01T21:41:47+08:00">2022-02-01</time>
+        <time title="Modified: 2022-02-01 22:12:10" itemprop="dateModified" datetime="2022-02-01T22:12:10+08:00">2022-02-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,7 +263,7 @@
 <blockquote>
 <p>(1) 若 $x\in S$，$y\in S$，那以下只會有一種情況成立，<br>$$x&lt;y,\quad x=y,\quad y&lt;x$$<br>(2) 若 $x,y,z\in S$ 且 $x&lt;y$，$y&lt;z$，則 $x&lt;z$。</p>
 </blockquote>
-<p>，則我們說 $(S,&lt;)$ 是一個 Ordered set。順帶一提，這裡的 $S$ 是一個全序集，裡面所有元素皆可比較。順序關係不必一定要求集合內的所有元素具可比性 (這樣的關係稱為偏序關係)，但是仍需要滿足遞移性等性質。</p>
+<p>，則我們說 $(S,&lt;)$ 是一個 Ordered set。順帶一提，這裡的 $S$ 是一個全序集，裡面所有元素皆可比較。順序關係不必一定要求集合內的所有元素都具可比性 (這樣的關係稱為偏序關係)，但是仍需要滿足遞移性等性質。</p>
 <h3 id="有序體-Ordered-field"><a href="#有序體-Ordered-field" class="headerlink" title="有序體 (Ordered field)"></a>有序體 (Ordered field)</h3><p>體 (Field)是包含加法和乘法運算的集合，除此之外，這個集合 $F$ 還須滿足 Field axioms，包含加法和乘法運算封閉、分配律等 (剩下交給 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9F%9F_(%E6%95%B8%E5%AD%B8)">維基百科</a>)。<br>對我們平常熟悉的集合驗證 Field axioms，可以知道有理數和實數都是 Field，而整數不是 Field，因為整數集合不包含全部整數的乘法反元素。</p>
 <p>有序體 (Ordered field)是一個 Field 同時也是 Ordered set，且滿足</p>
 <blockquote>
@@ -287,8 +287,8 @@
 <blockquote>
 <p>(1) $A$ 有最大值，$B$ 沒有最小值。<br>(2) $A$ 沒有最大值，$B$ 有最小值。</p>
 </blockquote>
-<p>給定任一實數的非空子集合 $S$ ，如果令 $B$ 為 $S$ 所有上界的集合，那麼 $A=B’$ 和 $B$ 就形成了一個實數的 Dedekind cut。上面第一種情況是不可能發生的，至於為什麼就留給各位想想看◝(　ﾟ∀ ﾟ )◟。</p>
-<p>儘管一個實數的非空子集的最小上界 $c$ 不必然屬於這個集合，但在這個情況，對每個 $\episilon&gt;0$，這個集合裡都有一個元素 $t$ 滿足$$c-\epsilon&lt;t&lt;c$$<br><br>LUB公理是完備性公理的一個等價命題，其他還有數個命題與前述等價，有興趣的話可以看看 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%95%B0%E5%AE%8C%E5%A4%87%E6%80%A7">這個</a>。</p>
+<p>給定任一實數的非空子集合 $S$ ，如果令 $B$ 為 $S$ 所有上界的集合，那麼 $A=B’$ 和 $B$ 就形成了一個實數的 Dedekind cut。這個定義下不可能發生上面第一種情況，至於為什麼就留給各位想想看 ◝(　ﾟ∀ ﾟ )◟。</p>
+<p>儘管一個實數的非空子集的最小上界 $c$ 不必然屬於這個集合，但在這個情況，對每個 $\epsilon&gt;0$，這個集合裡都有一個元素 $t$ 滿足$$c-\epsilon&lt;t&lt;c$$<br><br>LUB公理是完備性公理的一個等價命題，其他還有數個命題與前述等價，有興趣的話可以看看 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AE%9E%E6%95%B0%E5%AE%8C%E5%A4%87%E6%80%A7">這個</a>。</p>
 <h3 id="阿基米德性質-Archimedean-property"><a href="#阿基米德性質-Archimedean-property" class="headerlink" title="阿基米德性質 (Archimedean property)"></a>阿基米德性質 (Archimedean property)</h3><p>這個性質敘述的正是前言中我們希望得到的性質，以下則是阿基米德性質的另一個等價敘述：</p>
 <blockquote>
 <p>若 $x\in\mathbb{R}$，$y\in\mathbb{R}$ 且 $x&gt;0$，則存在正整數 $n$ 使得 $nx&gt;y$。</p>
@@ -302,7 +302,7 @@
 </blockquote>
 <p>根據阿基米德性質，我們可以找到正整數 $n$ 使得 $n(y-x)&gt;1$ ，直觀來看 $nx$ 和 $ny$ 之間一定可以找到一個整數 $m$ ，令 $p=\dfrac{m}{n}$ 即為所求。</p>
 <p>從阿基米德性質可以推得有理數在實數間稠密，反過來從後者也可以推得前者 (兩者等價)，不過這個證明就留給有興趣的讀者做做看。</p>
-<h2 id="指數函數"><a href="#指數函數" class="headerlink" title="指數函數"></a>指數函數</h2><p>相信很多人對指數函數都不陌生，指數函數的運算規則對受過高中數學教育的人來說，應該已經到了理所當然的程度。不過這個熟悉的函數有些令人感到困惑的部分，例如，一個數的無理數次方到底是什麼意思？<br>有了上一節得到的定理和性質，我們可以來重新認識我們的指數函數好朋友d(`･∀･)b</p>
+<h2 id="指數函數"><a href="#指數函數" class="headerlink" title="指數函數"></a>指數函數</h2><p>相信很多人對指數函數都不陌生，指數函數的運算規則對受過高中數學教育的人來說，應該已經到了理所當然的程度。不過這個熟悉的函數有些令人感到困惑的部分，例如，一個數的無理數次方到底是什麼意思？<br>結論來說，無理數指數是被定義出來的。有了上一節得到的定理和性質，我們就來重新認識我們的指數函數好朋友 d(`･∀･)b。</p>
 <p><img src="https://i.imgur.com/n1Nvm6L.png"><br>以下要做的是，從以整數為指數出發，定義以有理數、無理數為指數的數，然後推廣運算規則到實數的指數。</p>
 <p>首先，我們要確認</p>
 <blockquote>
