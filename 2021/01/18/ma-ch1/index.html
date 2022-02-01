@@ -20,18 +20,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="我就讀的大學有一門數學系的課—「分析導論」(或叫作高等微積分)。數學系的學生可能已經習慣了這種課程難度，不過對一個經濟系的學生 (我)而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。正因為內容比較難，所以我想用比較簡單的方式讓更多人體會分導的樂趣。">
+<meta name="description" content="我就讀的大學有一門數學系的課—「分析導論」(或叫作高等微積分)。搞不好數學系的學生已經習慣了這種課程難度，不過對一個經濟系的學生 (我)而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。也正因為內容比較難，所以我想用比較簡單的方式讓更多人體會分導的樂趣。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="數學分析—Ch.1 實數系">
 <meta property="og:url" content="http://example.com/2021/01/18/ma-ch1/index.html">
 <meta property="og:site_name" content="就這樣吧">
-<meta property="og:description" content="我就讀的大學有一門數學系的課—「分析導論」(或叫作高等微積分)。數學系的學生可能已經習慣了這種課程難度，不過對一個經濟系的學生 (我)而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。正因為內容比較難，所以我想用比較簡單的方式讓更多人體會分導的樂趣。">
+<meta property="og:description" content="我就讀的大學有一門數學系的課—「分析導論」(或叫作高等微積分)。搞不好數學系的學生已經習慣了這種課程難度，不過對一個經濟系的學生 (我)而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。也正因為內容比較難，所以我想用比較簡單的方式讓更多人體會分導的樂趣。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/7zCcKoY.jpg">
 <meta property="og:image" content="https://i.imgur.com/02J8esW.png">
 <meta property="og:image" content="https://i.imgur.com/n1Nvm6L.png">
 <meta property="article:published_time" content="2021-01-18T15:34:22.000Z">
-<meta property="article:modified_time" content="2022-02-01T10:31:00.231Z">
+<meta property="article:modified_time" content="2022-02-01T13:41:47.490Z">
 <meta property="article:author" content="Gary">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.imgur.com/7zCcKoY.jpg">
@@ -211,7 +211,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-02-01 18:31:00" itemprop="dateModified" datetime="2022-02-01T18:31:00+08:00">2022-02-01</time>
+        <time title="Modified: 2022-02-01 21:41:47" itemprop="dateModified" datetime="2022-02-01T21:41:47+08:00">2022-02-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -251,11 +251,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>我就讀的大學有一門數學系的課—「分析導論」(或叫作高等微積分)。數學系的學生可能已經習慣了這種課程難度，不過對一個經濟系的學生 (我)而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。正因為內容比較難，所以我想用比較簡單的方式讓更多人體會分導的樂趣。</p>
+        <p>我就讀的大學有一門數學系的課—「分析導論」(或叫作高等微積分)。搞不好數學系的學生已經習慣了這種課程難度，不過對一個經濟系的學生 (我)而言分導的難度真的頗高，每週都要花很多時間讀懂課本和寫作業。也正因為內容比較難，所以我想用比較簡單的方式讓更多人體會分導的樂趣。</p>
 <span id="more"></span>
 
 <p>我對這門課內容的理解有限，大概會比較像是在導讀一本書，但直接把書裡的證明全都放上來也不是個好辦法。這系列的文章會省略或簡單描述定理的證明，著重在我認為比較重要或有趣的部分。希望這系列文章對不瞭解數學分析在學什麼，或是對數學有興趣的讀者有幫助，如果對更詳盡的證明有興趣，可以找分析相關的原文書或教學影片。</p>
-<p><img src="https://i.imgur.com/7zCcKoY.jpg"><br>此文章參考的原文書，全書三百多頁充滿了證明。雖然大部分的微積分技巧應該在初微就會教了，但如果有一些定理是你學的時候不太能理解為什麼，或者只能用直觀理解，也許這本書裡有你想要的證明。</p>
+<p><img src="https://i.imgur.com/7zCcKoY.jpg"><br>此文章參考的原文書，全書三百多頁充滿了證明。雖然大部分的微積分技巧應該在初微就會教了，但如果有一些定理是你學的時候不太能理解為什麼，或者只能用直觀理解，也許這本書裡會有你想要的證明。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先請想想一個問題：為什麼 $\lim\limits_{n\rightarrow\infty}\dfrac{1}{n}=0$ ？<br>從極限的定義來看，我們需要證明：對任一實數 $r&gt;0$，存在正整數 $n$ 使得 $\dfrac{1}{n}&lt;r$。直觀上這個 $n$ 理所當然應該要存在，否則就像是在說有一個實數可以比任何正整數都還要大一樣。</p>
 <p>那<br>我們要如何說明沒有這樣的實數呢?</p>
 <p>這個問題涉及實數系的定義，以下先介紹「有序體」的概念，至於實數系的建構恕我簡單帶過，之後介紹本章最重要的兩個定理：最小上界定理，和阿基米德性質。</p>
@@ -333,7 +333,7 @@
 </ol>
 </blockquote>
 <p>指數函數的部分來自習題，寫進來單純是因為我覺得很有趣，如果各位有機會修分導而且也是用 Rudin 的話，第一週作業出現這題也是非常合理的。</p>
-<p>最後感謝各位的閱讀，寫完 Ch.2 的日子目前是遙遙無期。之後的章節也會比較難，但我希望盡量寫得容易閱讀，至少讓對初微有點概念的人也能看懂。</p>
+<p>最後感謝各位的閱讀，寫完 Ch.2 的日子目前是遙遙無期。之後的章節會比較難，但我希望盡量寫得容易閱讀，至少讓對初微有點概念的人也能看懂。</p>
 
     </div>
 
